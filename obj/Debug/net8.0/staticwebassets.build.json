@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "7z8TE70Gaz2nQxWOETO072k61v+x8zIYkXXjFWPCdWk=",
+  "Source": "CloudRunTest",
+  "BasePath": "_content/CloudRunTest",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
