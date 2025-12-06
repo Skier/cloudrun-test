@@ -1,0 +1,38 @@
+steps:
+  # 1. Собрать Docker-образ
+  - name: gcr.io/cloud-builders/docker
+    args:
+      [
+        "build",
+        "-t",
+        "northamerica-northeast1-docker.pkg.dev/ttc-schedule/cloudrun-repo/cloudrun-test:$COMMIT_SHA",
+        ".",
+      ]
+
+  # 2. Запушить образ в Artifact Registry
+  - name: gcr.io/cloud-builders/docker
+    args:
+      [
+        "push",
+        "northamerica-northeast1-docker.pkg.dev/ttc-schedule/cloudrun-repo/cloudrun-test:$COMMIT_SHA",
+      ]
+
+  # 3. Задеплоить в Cloud Run
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: gcloud
+    args:
+      [
+        "run",
+        "deploy",
+        "cloudrun-test",
+        "--image",
+        "northamerica-northeast1-docker.pkg.dev/ttc-schedule/cloudrun-repo/cloudrun-test:$COMMIT_SHA",
+        "--region",
+        "northamerica-northeast1",
+        "--platform",
+        "managed",
+        "--allow-unauthenticated",
+      ]
+
+images:
+  - "northamerica-northeast1-docker.pkg.dev/ttc-schedule/cloudrun-repo/cloudrun-test:$COMMIT_SHA"
