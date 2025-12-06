@@ -1,7 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello from Cloud Run via Cloud Build! Fixed Logger. ");
+app.MapGet("/", () => "Hello from Cloud Run via Cloud Build! Fixing Logger. ");
 
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 app.Urls.Add($"http://0.0.0.0:{port}");
