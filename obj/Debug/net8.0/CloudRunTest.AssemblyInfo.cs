@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CloudRunTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ab8247f86a2cf1d327ba82a6e9c74a76a5fe8a3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95ee8af724509b1443345dc843c87ff9b0eeb392")]
 [assembly: System.Reflection.AssemblyProductAttribute("CloudRunTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CloudRunTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
