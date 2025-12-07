@@ -33,8 +33,6 @@ steps:
         "managed",
         "--allow-unauthenticated",
       ]
-    options:
-      logging: NONE
 
 images:
   - "northamerica-northeast1-docker.pkg.dev/ttc-schedule/cloudrun-repo/cloudrun-test:$COMMIT_SHA"
